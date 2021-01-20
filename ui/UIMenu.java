@@ -1,10 +1,25 @@
 package ui;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
+import model.Bebida;
+import model.Comida;
+import model.Mesa;
+import model.Mesero;
+
 public class UIMenu {
-    
+
+    public static ArrayList<Bebida> menuBebidas =  new ArrayList<>();
+    public static ArrayList<Comida> menuComida =  new ArrayList<>();
+ 
+    public static Comida nuevoPlatillo; 
+    public static Bebida nuevaBebida; 
+    public static Mesa nuevaMesa; 
+
     public static void showMenu(){
+
+
 
         Scanner sc = new Scanner(System.in);
         int response;
@@ -21,7 +36,7 @@ public class UIMenu {
 
             switch(response){
                 case 1:
-                    //showUIRegistro
+                    UIMeseroMenu.registrarMesero();
                     break;
                 case 2:
                     //showUIMesero
@@ -30,6 +45,7 @@ public class UIMenu {
                     //showUIProducto
                     break;
                 case 0:
+                    System.out.println("Hasta la proxima");
                     break;
             }
 
@@ -38,4 +54,6 @@ public class UIMenu {
         
         
     }
+
+
 }

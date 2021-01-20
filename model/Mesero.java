@@ -1,15 +1,17 @@
 package model;
 
 public class Mesero {
-    int id;
-    String name;
-    String email;
+    private int id;
+    private String name;
+    private String email;
+    private String password;
 
-    public Mesero(int id, String name, String email) {
-        this.id = id;
+    public Mesero(String name, String email, String password) {
         this.name = name;
         this.email = email;
+        this.password = password;
     }
+
 
     public int getId() {
         return id;
@@ -33,6 +35,14 @@ public class Mesero {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
     
 }
